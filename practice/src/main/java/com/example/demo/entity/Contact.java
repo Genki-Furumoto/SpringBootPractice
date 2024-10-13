@@ -13,38 +13,35 @@ import lombok.Data;
 @Data
 @Table(name = "contacts")
 public class Contact {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "id")
-	private Long id;
-	
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "last_name", nullable = false)
     private String lastName;
-	
-	@Column(name = "first_name", nullable = false)
-	private String firstName;
-	
-	@Column(name = "email", nullable = false)
-	private String email;
-	
-	@Column(name = "phone", nullable = false)
-	private String phone;
-	
-	@Column(name = "zip_code", nullable = false)
-	private String zipCode;
-	
-	@Column(name = "address", nullable = false)
-	private String address;
-	
-	@Column(name = "building_name", nullable = false)
-	private String buildingName;
-	
-	@Column(name = "contact_type", nullable = false)
-	private String contactType;
-	
-	@Column(name = "body", nullable = false)
-	private String body;
-	
-	
+
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
+    @Column(name = "email", nullable = false)
+    private String email;
+
+    @Column(name = "phone", nullable = false)
+    private String phone;
+
+    @Column(name = "zip_code", nullable = false)
+    private String zipCode;
+
+    @Column(name = "address", nullable = false)
+    private String address;
+
+    @Column(name = "building_name", nullable = false)
+    private String buildingName;
+
+    @Column(name = "contact_type", nullable = false)
+    private String contactType;
+
+    @Column(name = "body", nullable = false)
+    private String body;
 }
