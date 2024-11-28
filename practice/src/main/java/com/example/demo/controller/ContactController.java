@@ -24,6 +24,7 @@ public class ContactController {
 	@Autowired
 	private ContactService contactService;
 	
+	
 	@GetMapping("/contact")
 	// Modelオブジェクトは、Spring特有のコンテナ
 	// 初期化をせずにもともと使える。
@@ -32,7 +33,7 @@ public class ContactController {
 	public String contact(Model model) {
 		model.addAttribute("contactForm", new ContactForm());
 		
-		return "contact";
+		return "/contact/contact";
 	}
 	
 	@PostMapping("/contact")
@@ -44,7 +45,7 @@ public class ContactController {
 		
 		// エラーがあれば、そのままcontactの内容をビューに返す。（エラーメッセつき）
 		if(errorResult.hasErrors()) {
-			return "contact";
+			return "contact/contact";
 		}
 		
 		// セッションを取得
@@ -65,7 +66,7 @@ public class ContactController {
 		
 		model.addAttribute("contactForm", contactForm);
 		
-		return "confirmation";
+		return "contact/confirmation";
 	}
 	
 	@PostMapping("/contact/register")
@@ -108,7 +109,7 @@ public class ContactController {
 		// セッションを無効かする。ログアウト処理などでよく使う。
 		session.invalidate();
 		
-		return "completion";
+		return "contact/completion";
 	}
 	
 

@@ -12,6 +12,9 @@ import lombok.Data;
 
 @Data
 public class ContactForm implements Serializable {
+	
+	private Long id;
+	
 	@NotBlank
     private String lastName;
 	
