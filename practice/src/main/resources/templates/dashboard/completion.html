@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>編集完了</title>
+	</head>
+	<body>お問い合わせ内容の編集を完了しました。</h1>
+		<p>お問い合わせNo.<span th:text="${contactById.id}"></span>について、編集を完了しました。</p>
+		<form th:action="@{/admin/contacts/signout}" method="get">
+			<button type="submit">ログアウト</button>
+		</form>
+	</body>
+</html>
